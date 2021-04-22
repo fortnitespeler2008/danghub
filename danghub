@@ -1,0 +1,786 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local DangHub = Instance.new("ScreenGui")
+local LoginFrame = Instance.new("Frame")
+local LoginTitle = Instance.new("TextLabel")
+local extraText = Instance.new("TextLabel")
+local Login = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local username = Instance.new("TextBox")
+local password = Instance.new("TextBox")
+local DangHub_2 = Instance.new("Frame")
+local dangHubTitle = Instance.new("TextLabel")
+local infoTextHome = Instance.new("TextLabel")
+local Info = Instance.new("TextLabel")
+local dangHubTitle2 = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local optionScreen = Instance.new("Frame")
+local universal = Instance.new("TextButton")
+local games = Instance.new("TextButton")
+local admins = Instance.new("TextButton")
+local hubs = Instance.new("TextButton")
+local backToHome = Instance.new("TextButton")
+local closeOptions = Instance.new("TextButton")
+local openOptions = Instance.new("TextButton")
+local UniversalFrame = Instance.new("Frame")
+local universalTitle = Instance.new("TextLabel")
+local OpenOptions = Instance.new("TextButton")
+local noclip = Instance.new("TextButton")
+local unnoclip = Instance.new("TextButton")
+local fly = Instance.new("TextButton")
+local unfly = Instance.new("TextButton")
+local speed = Instance.new("TextLabel")
+local jump = Instance.new("TextLabel")
+local min10speed = Instance.new("TextButton")
+local plus10speed = Instance.new("TextButton")
+local min10jump = Instance.new("TextButton")
+local plus10jump = Instance.new("TextButton")
+local tpToLocation = Instance.new("TextButton")
+local Vector3Coordinates = Instance.new("TextBox")
+local GamesFrame = Instance.new("Frame")
+local openoptions = Instance.new("TextButton")
+local gameTitle = Instance.new("TextLabel")
+local updates = Instance.new("TextLabel")
+local adminFrame = Instance.new("Frame")
+local OPENOPTIONS = Instance.new("TextButton")
+local adminTitle = Instance.new("TextLabel")
+local infiniteYield = Instance.new("TextButton")
+local shattervest = Instance.new("TextButton")
+local adminUpdates = Instance.new("TextLabel")
+local LoadScreen = Instance.new("Frame")
+local loading = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+DangHub.Name = "DangHub"
+DangHub.Parent = game.CoreGui
+DangHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+LoginFrame.Name = "LoginFrame"
+LoginFrame.Parent = DangHub
+LoginFrame.BackgroundColor3 = Color3.fromRGB(45, 50, 60)
+LoginFrame.BorderSizePixel = 4
+LoginFrame.Position = UDim2.new(0.085870415, 0, 0.30870086, 0)
+LoginFrame.Size = UDim2.new(0, 236, 0, 321)
+LoginFrame.Draggable = true
+
+LoginTitle.Name = "LoginTitle"
+LoginTitle.Parent = LoginFrame
+LoginTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LoginTitle.BackgroundTransparency = 1.000
+LoginTitle.Size = UDim2.new(0, 236, 0, 50)
+LoginTitle.Font = Enum.Font.SourceSans
+LoginTitle.Text = "Login"
+LoginTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoginTitle.TextScaled = true
+LoginTitle.TextSize = 14.000
+LoginTitle.TextWrapped = true
+
+extraText.Name = "extraText"
+extraText.Parent = LoginFrame
+extraText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+extraText.BackgroundTransparency = 1.000
+extraText.Position = UDim2.new(0, 0, 0.859812975, 0)
+extraText.Size = UDim2.new(0, 236, 0, 44)
+extraText.Font = Enum.Font.SourceSans
+extraText.Text = "dont have an account? dm me SamuelIsPro#1253"
+extraText.TextColor3 = Color3.fromRGB(255, 255, 255)
+extraText.TextSize = 14.000
+
+Login.Name = "Login"
+Login.Parent = LoginFrame
+Login.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+Login.Position = UDim2.new(0.0762711838, 0, 0.704049826, 0)
+Login.Size = UDim2.new(0, 200, 0, 50)
+Login.Font = Enum.Font.GothamBlack
+Login.Text = "login"
+Login.TextColor3 = Color3.fromRGB(0, 0, 0)
+Login.TextScaled = true
+Login.TextSize = 14.000
+Login.TextWrapped = true
+Login.MouseButton1Down:connect(function()
+	if username.Text == "DxrkDev" and password.Text == "DxrkDevWasHere" then
+		LoginFrame:Destroy()
+		LoadScreen.Visible = true
+		wait(5)
+		LoadScreen:Destroy()
+		DangHub_2.Visible = true
+	else
+		LoginFrame.Visible = true
+		LoadScreen.Visible = false
+		Login.Text = "incorrect username or password!"
+		Login.TextColor3 = Color3.new(255,0,0)
+		wait(3)
+		Login.Text = "Login"
+		Login.TextColor3 = Color3.new(0,0,0)
+	end
+end)
+
+UICorner.Parent = Login
+
+username.Name = "username"
+username.Parent = LoginFrame
+username.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+username.Position = UDim2.new(0.0762711838, 0, 0.221183807, 0)
+username.Size = UDim2.new(0, 200, 0, 50)
+username.Font = Enum.Font.SourceSans
+username.Text = "username"
+username.TextColor3 = Color3.fromRGB(0, 0, 0)
+username.TextScaled = true
+username.TextSize = 14.000
+username.TextWrapped = true
+
+password.Name = "password"
+password.Parent = LoginFrame
+password.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+password.Position = UDim2.new(0.0762711838, 0, 0.479750782, 0)
+password.Size = UDim2.new(0, 200, 0, 50)
+password.Font = Enum.Font.SourceSans
+password.Text = "password"
+password.TextColor3 = Color3.fromRGB(0, 0, 0)
+password.TextScaled = true
+password.TextSize = 14.000
+password.TextWrapped = true
+
+DangHub_2.Name = "DangHub"
+DangHub_2.Parent = DangHub
+DangHub_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+DangHub_2.Position = UDim2.new(0.505854785, 0, 0.269368321, 0)
+DangHub_2.Size = UDim2.new(0, 555, 0, 347)
+DangHub_2.Visible = false
+DangHub_2.Draggable = true
+
+dangHubTitle.Name = "dangHubTitle"
+dangHubTitle.Parent = DangHub_2
+dangHubTitle.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+dangHubTitle.BackgroundTransparency = 1.000
+dangHubTitle.Position = UDim2.new(0.0990990996, 0, 0, 0)
+dangHubTitle.Size = UDim2.new(0, 390, 0, 50)
+dangHubTitle.Font = Enum.Font.GothamBlack
+dangHubTitle.Text = "Welcome To Dang"
+dangHubTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+dangHubTitle.TextScaled = true
+dangHubTitle.TextSize = 14.000
+dangHubTitle.TextWrapped = true
+
+infoTextHome.Name = "infoTextHome"
+infoTextHome.Parent = DangHub_2
+infoTextHome.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+infoTextHome.Position = UDim2.new(0.318918914, 0, 0.204610944, 0)
+infoTextHome.Size = UDim2.new(0, 200, 0, 50)
+infoTextHome.Font = Enum.Font.GothamBlack
+infoTextHome.Text = "home"
+infoTextHome.TextColor3 = Color3.fromRGB(0, 0, 0)
+infoTextHome.TextScaled = true
+infoTextHome.TextSize = 14.000
+infoTextHome.TextWrapped = true
+
+Info.Name = "Info"
+Info.Parent = DangHub_2
+Info.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Info.BackgroundTransparency = 1.000
+Info.Position = UDim2.new(0, 0, 0.443804115, 0)
+Info.Size = UDim2.new(0, 555, 0, 173)
+Info.Font = Enum.Font.SourceSans
+Info.Text = "Welcome To DangHub! this is a new payed script with multiple scripts, admin networks, hub loaders and much more! if you found any bugs contact me on discord SamuelIsPro#1253 or leave it in the server #bugs"
+Info.TextColor3 = Color3.fromRGB(255, 255, 255)
+Info.TextScaled = true
+Info.TextSize = 14.000
+Info.TextWrapped = true
+
+dangHubTitle2.Name = "dangHubTitle2"
+dangHubTitle2.Parent = DangHub_2
+dangHubTitle2.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+dangHubTitle2.Position = UDim2.new(0.801801801, 0, 0, 0)
+dangHubTitle2.Size = UDim2.new(0, 84, 0, 50)
+dangHubTitle2.Font = Enum.Font.GothamBlack
+dangHubTitle2.Text = "Hub"
+dangHubTitle2.TextColor3 = Color3.fromRGB(255, 255, 255)
+dangHubTitle2.TextScaled = true
+dangHubTitle2.TextSize = 14.000
+dangHubTitle2.TextWrapped = true
+
+UICorner_2.Parent = dangHubTitle2
+
+optionScreen.Name = "optionScreen"
+optionScreen.Parent = DangHub_2
+optionScreen.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+optionScreen.Size = UDim2.new(0, 135, 0, 347)
+optionScreen.Visible = false
+
+universal.Name = "universal"
+universal.Parent = optionScreen
+universal.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+universal.Position = UDim2.new(0, 0, 0.0605187304, 0)
+universal.Size = UDim2.new(0, 135, 0, 50)
+universal.Font = Enum.Font.SourceSans
+universal.Text = "universal"
+universal.TextColor3 = Color3.fromRGB(255, 255, 255)
+universal.TextScaled = true
+universal.TextSize = 14.000
+universal.TextWrapped = true
+universal.MouseButton1Down:connect(function()
+	UniversalFrame.Visible = true
+	GamesFrame.Visible = false
+	adminFrame.Visible = false
+	optionScreen.Visible = false
+end)
+
+games.Name = "games"
+games.Parent = optionScreen
+games.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+games.Position = UDim2.new(0, 0, 0.239193082, 0)
+games.Size = UDim2.new(0, 135, 0, 50)
+games.Font = Enum.Font.SourceSans
+games.Text = "games"
+games.TextColor3 = Color3.fromRGB(255, 255, 255)
+games.TextScaled = true
+games.TextSize = 14.000
+games.TextWrapped = true
+games.MouseButton1Down:connect(function()
+	UniversalFrame.Visible = false
+	GamesFrame.Visible = true
+	adminFrame.Visible = false
+	optionScreen.Visible = false
+	
+end)
+
+admins.Name = "admins"
+admins.Parent = optionScreen
+admins.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+admins.Position = UDim2.new(0, 0, 0.426512957, 0)
+admins.Size = UDim2.new(0, 135, 0, 50)
+admins.Font = Enum.Font.SourceSans
+admins.Text = "admins"
+admins.TextColor3 = Color3.fromRGB(255, 255, 255)
+admins.TextScaled = true
+admins.TextSize = 14.000
+admins.TextWrapped = true
+admins.MouseButton1Down:connect(function()
+	UniversalFrame.Visible = false
+	GamesFrame.Visible = false
+	adminFrame.Visible = true
+	optionScreen.Visible = false
+end)
+
+hubs.Name = "hubs"
+hubs.Parent = optionScreen
+hubs.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+hubs.Position = UDim2.new(0, 0, 0.602305472, 0)
+hubs.Size = UDim2.new(0, 135, 0, 50)
+hubs.Font = Enum.Font.SourceSans
+hubs.Text = "hubs"
+hubs.TextColor3 = Color3.fromRGB(255, 255, 255)
+hubs.TextScaled = true
+hubs.TextSize = 14.000
+hubs.TextWrapped = true
+hubs.MouseButton1Down:connect(function()
+	UniversalFrame.Visible = false
+	GamesFrame.Visible = false
+	adminFrame.Visible = false
+	optionScreen.Visible = false
+end)
+
+backToHome.Name = "backToHome"
+backToHome.Parent = optionScreen
+backToHome.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+backToHome.Position = UDim2.new(0, 0, 0.602305472, 0)
+backToHome.Size = UDim2.new(0, 135, 0, 50)
+backToHome.Font = Enum.Font.SourceSans
+backToHome.Text = "back to home"
+backToHome.TextColor3 = Color3.fromRGB(255, 255, 255)
+backToHome.TextScaled = true
+backToHome.TextSize = 14.000
+backToHome.TextWrapped = true
+backToHome.MouseButton1Down:connect(function()
+	GamesFrame.Visible = false
+	adminFrame.Visible = false
+	UniversalFrame.Visible = false
+	optionScreen.Visible = false
+end)
+
+closeOptions.Name = "closeOptions"
+closeOptions.Parent = optionScreen
+closeOptions.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+closeOptions.Position = UDim2.new(0.614814818, 0, 0.81556195, 0)
+closeOptions.Size = UDim2.new(0, 52, 0, 50)
+closeOptions.Font = Enum.Font.SourceSans
+closeOptions.Text = "<-"
+closeOptions.TextColor3 = Color3.fromRGB(255, 255, 255)
+closeOptions.TextScaled = true
+closeOptions.TextSize = 14.000
+closeOptions.TextWrapped = true
+closeOptions.MouseButton1Down:connect(function()
+	optionScreen.Visible = false
+end)
+
+openOptions.Name = "openOptions"
+openOptions.Parent = DangHub_2
+openOptions.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+openOptions.Size = UDim2.new(0, 55, 0, 50)
+openOptions.Font = Enum.Font.SourceSans
+openOptions.Text = "->"
+openOptions.TextColor3 = Color3.fromRGB(255, 255, 255)
+openOptions.TextScaled = true
+openOptions.TextSize = 14.000
+openOptions.TextWrapped = true
+openOptions.MouseButton1Down:connect(function()
+	optionScreen.Visible = true
+end)
+
+UniversalFrame.Name = "UniversalFrame"
+UniversalFrame.Parent = DangHub_2
+UniversalFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+UniversalFrame.Size = UDim2.new(0, 555, 0, 347)
+UniversalFrame.Visible = false
+
+universalTitle.Name = "universalTitle"
+universalTitle.Parent = UniversalFrame
+universalTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+universalTitle.BackgroundTransparency = 1.000
+universalTitle.Position = UDim2.new(0.0990990996, 0, 0, 0)
+universalTitle.Size = UDim2.new(0, 445, 0, 50)
+universalTitle.Font = Enum.Font.GothamBlack
+universalTitle.Text = "Universal"
+universalTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+universalTitle.TextScaled = true
+universalTitle.TextSize = 14.000
+universalTitle.TextWrapped = true
+
+OpenOptions.Name = "OpenOptions"
+OpenOptions.Parent = UniversalFrame
+OpenOptions.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+OpenOptions.Size = UDim2.new(0, 55, 0, 50)
+OpenOptions.Font = Enum.Font.SourceSans
+OpenOptions.Text = "->"
+OpenOptions.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenOptions.TextScaled = true
+OpenOptions.TextSize = 14.000
+OpenOptions.TextWrapped = true
+OpenOptions.MouseButton1Down:connect(function()
+	optionScreen.Visible = true
+end)
+
+noclip.Name = "noclip"
+noclip.Parent = UniversalFrame
+noclip.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+noclip.Position = UDim2.new(0.0342342332, 0, 0.204610944, 0)
+noclip.Size = UDim2.new(0, 118, 0, 50)
+noclip.Font = Enum.Font.SourceSans
+noclip.Text = "noclip"
+noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+noclip.TextScaled = true
+noclip.TextSize = 14.000
+noclip.TextWrapped = true
+noclip.MouseButton1Down:connect(function()
+	noclip = false
+	game:GetService("RunService").Stepped:Connect(function()
+		if noclip then
+			game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+			local p = game.Players.LocalPlayer
+			local mo = p:GetMouse()
+
+			mo.KeyDown:connect(function(k)
+				if k == "e" then
+					noclip = not noclip
+					p.Character.Humanoid:ChangeState(11)
+				end
+			end
+		end
+	end)
+end)
+
+unnoclip.Name = "unnoclip"
+unnoclip.Parent = UniversalFrame
+unnoclip.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+unnoclip.Position = UDim2.new(0.284684688, 0, 0.204610944, 0)
+unnoclip.Size = UDim2.new(0, 118, 0, 50)
+unnoclip.Font = Enum.Font.SourceSans
+unnoclip.Text = "unnoclip"
+unnoclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+unnoclip.TextScaled = true
+unnoclip.TextSize = 14.000
+unnoclip.TextWrapped = true
+
+fly.Name = "fly"
+fly.Parent = UniversalFrame
+fly.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+fly.Position = UDim2.new(0.551351368, 0, 0.204610944, 0)
+fly.Size = UDim2.new(0, 118, 0, 50)
+fly.Font = Enum.Font.SourceSans
+fly.Text = "fly"
+fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+fly.TextScaled = true
+fly.TextSize = 14.000
+fly.TextWrapped = true
+fly.MouseButton1Down:connect(function()
+	repeat wait()
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer
+	local torso = plr.Character.Torso
+	local flying = true
+	local deb = true
+	local ctrl = {f = 0, b = 0, l = 0, r = 0}
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+	local maxspeed = 50
+	local speed = 0
+
+	function Fly()
+		local bg = Instance.new("BodyGyro", torso)
+		bg.P = 9e4
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		bg.cframe = torso.CFrame
+		local bv = Instance.new("BodyVelocity", torso)
+		bv.velocity = Vector3.new(0,0.1,0)
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		repeat wait()
+			plr.Character.Humanoid.PlatformStand = true
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+				speed = speed+.5+(speed/maxspeed)
+				if speed > maxspeed then
+					speed = maxspeed
+				end
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+				speed = speed-1
+				if speed < 0 then
+					speed = 0
+				end
+			end
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+			else
+				bv.velocity = Vector3.new(0,0.1,0)
+			end
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+		until not flying
+		ctrl = {f = 0, b = 0, l = 0, r = 0}
+		lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		speed = 0
+		bg:Destroy()
+		bv:Destroy()
+		plr.Character.Humanoid.PlatformStand = false
+	end
+	mouse.KeyDown:connect(function(key)
+		if key:lower() == "e" then
+			if flying then flying = false
+			else
+				flying = true
+				Fly()
+			end
+		elseif key:lower() == "w" then
+			ctrl.f = 1
+		elseif key:lower() == "s" then
+			ctrl.b = -1
+		elseif key:lower() == "a" then
+			ctrl.l = -1
+		elseif key:lower() == "d" then
+			ctrl.r = 1
+		end
+	end)
+	mouse.KeyUp:connect(function(key)
+		if key:lower() == "w" then
+			ctrl.f = 0
+		elseif key:lower() == "s" then
+			ctrl.b = 0
+		elseif key:lower() == "a" then
+			ctrl.l = 0
+		elseif key:lower() == "d" then
+			ctrl.r = 0
+		end
+	end)
+	Fly()
+end)
+end)
+
+unfly.Name = "unfly"
+unfly.Parent = UniversalFrame
+unfly.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+unfly.Position = UDim2.new(0.787387371, 0, 0.204610944, 0)
+unfly.Size = UDim2.new(0, 118, 0, 50)
+unfly.Font = Enum.Font.SourceSans
+unfly.Text = "unfly"
+unfly.TextColor3 = Color3.fromRGB(255, 255, 255)
+unfly.TextScaled = true
+unfly.TextSize = 14.000
+unfly.TextWrapped = true
+
+speed.Name = "speed"
+speed.Parent = UniversalFrame
+speed.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+speed.Position = UDim2.new(0.0342342332, 0, 0.443804026, 0)
+speed.Size = UDim2.new(0, 139, 0, 50)
+speed.Font = Enum.Font.SourceSans
+speed.Text = "speed"
+speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+speed.TextScaled = true
+speed.TextSize = 14.000
+speed.TextWrapped = true
+
+jump.Name = "jump"
+jump.Parent = UniversalFrame
+jump.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+jump.Position = UDim2.new(0.715315282, 0, 0.443804026, 0)
+jump.Size = UDim2.new(0, 139, 0, 50)
+jump.Font = Enum.Font.SourceSans
+jump.Text = "jump power"
+jump.TextColor3 = Color3.fromRGB(255, 255, 255)
+jump.TextScaled = true
+jump.TextSize = 14.000
+jump.TextWrapped = true
+
+min10speed.Name = "min10speed"
+min10speed.Parent = UniversalFrame
+min10speed.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+min10speed.Position = UDim2.new(0.0342342332, 0, 0.619596541, 0)
+min10speed.Size = UDim2.new(0, 64, 0, 50)
+min10speed.Font = Enum.Font.SourceSans
+min10speed.Text = "-10"
+min10speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+min10speed.TextScaled = true
+min10speed.TextSize = 14.000
+min10speed.TextWrapped = true
+min10speed.MouseButton1Down:connect(function()
+	p.Character.Humanoid.Walkspeed = p.Character.Humanoid.Walkspeed - 10
+end)
+
+plus10speed.Name = "plus10speed"
+plus10speed.Parent = UniversalFrame
+plus10speed.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+plus10speed.Position = UDim2.new(0.16936937, 0, 0.619596541, 0)
+plus10speed.Size = UDim2.new(0, 64, 0, 50)
+plus10speed.Font = Enum.Font.SourceSans
+plus10speed.Text = "+10"
+plus10speed.TextColor3 = Color3.fromRGB(255, 255, 255)
+plus10speed.TextScaled = true
+plus10speed.TextSize = 14.000
+plus10speed.TextWrapped = true
+plus10speed.MouseButton1Down:connect(function()
+	p.Character.Humanoid.Walkspeed = p.Character.Humanoid.Walkspeed + 10
+end)
+
+min10jump.Name = "min10jump"
+min10jump.Parent = UniversalFrame
+min10jump.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+min10jump.Position = UDim2.new(0.715315282, 0, 0.619596541, 0)
+min10jump.Size = UDim2.new(0, 64, 0, 50)
+min10jump.Font = Enum.Font.SourceSans
+min10jump.Text = "-10"
+min10jump.TextColor3 = Color3.fromRGB(255, 255, 255)
+min10jump.TextScaled = true
+min10jump.TextSize = 14.000
+min10jump.TextWrapped = true
+min10jump.MouseButton1Down:connect(function()
+	p.Character.Humanoid.JumpPower = p.Character.Humanoid.JumpPower - 10
+end)
+
+plus10jump.Name = "plus10jump"
+plus10jump.Parent = UniversalFrame
+plus10jump.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+plus10jump.Position = UDim2.new(0.850450397, 0, 0.619596541, 0)
+plus10jump.Size = UDim2.new(0, 64, 0, 50)
+plus10jump.Font = Enum.Font.SourceSans
+plus10jump.Text = "+10"
+plus10jump.TextColor3 = Color3.fromRGB(255, 255, 255)
+plus10jump.TextScaled = true
+plus10jump.TextSize = 14.000
+plus10jump.TextWrapped = true
+plus10jump.MouseButton1Down:connect(function()
+	p.Character.Humanoid.JumpPower = p.Character.Humanoid.JumpPower + 10
+end)
+
+tpToLocation.Name = "tpToLocation"
+tpToLocation.Parent = UniversalFrame
+tpToLocation.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+tpToLocation.Position = UDim2.new(0.318918914, 0, 0.619596541, 0)
+tpToLocation.Size = UDim2.new(0, 200, 0, 50)
+tpToLocation.Font = Enum.Font.SourceSans
+tpToLocation.Text = "top to coördinates"
+tpToLocation.TextColor3 = Color3.fromRGB(255, 255, 255)
+tpToLocation.TextScaled = true
+tpToLocation.TextSize = 14.000
+tpToLocation.TextWrapped = true
+tpToLocation.MouseButton1Down:connect(function()
+	p.Character.HumanoidRootPart.Position = Vector3.new(Vector3Coordinates.Text)
+end)
+
+Vector3Coordinates.Name = "Vector3Coordinates"
+Vector3Coordinates.Parent = UniversalFrame
+Vector3Coordinates.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+Vector3Coordinates.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Vector3Coordinates.Position = UDim2.new(0.318918914, 0, 0.443804026, 0)
+Vector3Coordinates.Size = UDim2.new(0, 200, 0, 50)
+Vector3Coordinates.Font = Enum.Font.SourceSans
+Vector3Coordinates.Text = "Vector3 coördinates"
+Vector3Coordinates.TextColor3 = Color3.fromRGB(255, 255, 255)
+Vector3Coordinates.TextScaled = true
+Vector3Coordinates.TextSize = 14.000
+Vector3Coordinates.TextWrapped = true
+
+GamesFrame.Name = "GamesFrame"
+GamesFrame.Parent = DangHub_2
+GamesFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+GamesFrame.Size = UDim2.new(0, 555, 0, 347)
+GamesFrame.Visible = false
+
+openoptions.Name = "openoptions"
+openoptions.Parent = GamesFrame
+openoptions.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+openoptions.Size = UDim2.new(0, 55, 0, 50)
+openoptions.Font = Enum.Font.SourceSans
+openoptions.Text = "->"
+openoptions.TextColor3 = Color3.fromRGB(255, 255, 255)
+openoptions.TextScaled = true
+openoptions.TextSize = 14.000
+openoptions.TextWrapped = true
+openoptions.MouseButton1Down:connect(function()
+	optionScreen.Visible = true
+end)
+
+gameTitle.Name = "gameTitle"
+gameTitle.Parent = GamesFrame
+gameTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gameTitle.BackgroundTransparency = 1.000
+gameTitle.Position = UDim2.new(0.0990990996, 0, 0, 0)
+gameTitle.Size = UDim2.new(0, 445, 0, 50)
+gameTitle.Font = Enum.Font.GothamBlack
+gameTitle.Text = "games"
+gameTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+gameTitle.TextScaled = true
+gameTitle.TextSize = 14.000
+gameTitle.TextWrapped = true
+
+updates.Name = "updates"
+updates.Parent = GamesFrame
+updates.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+updates.BackgroundTransparency = 1.000
+updates.Position = UDim2.new(0.0990990996, 0, 0.204610944, 0)
+updates.Size = UDim2.new(0, 474, 0, 248)
+updates.Font = Enum.Font.GothamBlack
+updates.Text = "currently there are no games yet because im very buzzy with school ill try to release games soon as possible, universal and admin panels are already avaible"
+updates.TextColor3 = Color3.fromRGB(255, 255, 255)
+updates.TextScaled = true
+updates.TextSize = 14.000
+updates.TextWrapped = true
+
+adminFrame.Name = "adminFrame"
+adminFrame.Parent = DangHub_2
+adminFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+adminFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+adminFrame.Size = UDim2.new(0, 555, 0, 347)
+adminFrame.Visible = false
+
+OPENOPTIONS.Name = "OPENOPTIONS"
+OPENOPTIONS.Parent = adminFrame
+OPENOPTIONS.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+OPENOPTIONS.Size = UDim2.new(0, 55, 0, 50)
+OPENOPTIONS.Font = Enum.Font.SourceSans
+OPENOPTIONS.Text = "->"
+OPENOPTIONS.TextColor3 = Color3.fromRGB(255, 255, 255)
+OPENOPTIONS.TextScaled = true
+OPENOPTIONS.TextSize = 14.000
+OPENOPTIONS.TextWrapped = true
+OPENOPTIONS.MouseButton1Down:connect(function()
+	optionScreen.Visible = true
+end)
+
+adminTitle.Name = "adminTitle"
+adminTitle.Parent = adminFrame
+adminTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+adminTitle.BackgroundTransparency = 1.000
+adminTitle.Position = UDim2.new(0.0990990996, 0, 0, 0)
+adminTitle.Size = UDim2.new(0, 445, 0, 50)
+adminTitle.Font = Enum.Font.GothamBlack
+adminTitle.Text = "admin panels"
+adminTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+adminTitle.TextScaled = true
+adminTitle.TextSize = 14.000
+adminTitle.TextWrapped = true
+
+infiniteYield.Name = "infiniteYield"
+infiniteYield.Parent = adminFrame
+infiniteYield.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+infiniteYield.Position = UDim2.new(0.0360360369, 0, 0.239193082, 0)
+infiniteYield.Size = UDim2.new(0, 150, 0, 50)
+infiniteYield.Font = Enum.Font.SourceSans
+infiniteYield.Text = "infinite yield"
+infiniteYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+infiniteYield.TextScaled = true
+infiniteYield.TextSize = 14.000
+infiniteYield.TextWrapped = true
+infiniteYield.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+shattervest.Name = "shattervest"
+shattervest.Parent = adminFrame
+shattervest.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+shattervest.Position = UDim2.new(0.363963962, 0, 0.239193082, 0)
+shattervest.Size = UDim2.new(0, 150, 0, 50)
+shattervest.Font = Enum.Font.SourceSans
+shattervest.Text = "shattervest"
+shattervest.TextColor3 = Color3.fromRGB(255, 255, 255)
+shattervest.TextScaled = true
+shattervest.TextSize = 14.000
+shattervest.TextWrapped = true
+shattervest.MouseButton1Down:connect(function()
+	loadstring(Game:HttpGet('https://pastebin.com/raw/MjmdAaq2'))()
+end)
+
+adminUpdates.Name = "adminUpdates"
+adminUpdates.Parent = adminFrame
+adminUpdates.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+adminUpdates.BackgroundTransparency = 1.000
+adminUpdates.Position = UDim2.new(0.0360360369, 0, 0.484149843, 0)
+adminUpdates.Size = UDim2.new(0, 515, 0, 179)
+adminUpdates.Font = Enum.Font.GothamBlack
+adminUpdates.Text = "more panels soon"
+adminUpdates.TextColor3 = Color3.fromRGB(255, 255, 255)
+adminUpdates.TextScaled = true
+adminUpdates.TextSize = 14.000
+adminUpdates.TextWrapped = true
+
+LoadScreen.Name = "LoadScreen"
+LoadScreen.Parent = DangHub
+LoadScreen.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+LoadScreen.Position = UDim2.new(0.311475396, 0, 0.355184734, 0)
+LoadScreen.Size = UDim2.new(0, 483, 0, 312)
+LoadScreen.Visible = false
+
+loading.Name = "loading"
+loading.Parent = LoadScreen
+loading.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+loading.BackgroundTransparency = 1.000
+loading.Size = UDim2.new(0, 483, 0, 50)
+loading.Font = Enum.Font.SciFi
+loading.Text = "loading..."
+loading.TextColor3 = Color3.fromRGB(255, 255, 255)
+loading.TextScaled = true
+loading.TextSize = 14.000
+loading.TextWrapped = true
+
+ImageLabel.Parent = LoadScreen
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0, 0, 0.317307711, 0)
+ImageLabel.Size = UDim2.new(0, 483, 0, 151)
+ImageLabel.Image = "rbxassetid://6713739078"print("Hello world!")
+
+hubs.Name = "hubs"
+hubs.Parent = optionScreen
+hubs.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+hubs.Position = UDim2.new(0, 0, 0.602305472, 0)
+hubs.Size = UDim2.new(0, 135, 0, 50)
+hubs.Font = Enum.Font.SourceSans
+hubs.Text = "hubs"
+hubs.TextColor3 = Color3.fromRGB(255, 255, 255)
+hubs.TextScaled = true
+hubs.TextSize = 14.000
+hubs.TextWrapped = true
